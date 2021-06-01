@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title> USERBOOK</title>
+  </head>
+<body>
+  <h1><strong>BOOKS ISSUED BY THE USER </strong></h1>
+  <table >
+        <th >BOOK NAME</th>
+        <th >ISSUED ON</th>
+        <th >RETURN DATE</th>
+     <tbody>
+     {% for books in b1 %}
+     <tr>
+          <td >{{books.bookname}}</td>
+          <td >{{books.issuedon}}</td>
+          <td >{{books.dayofreturn}}</td>
+     </tbody>   
+     </tr>
+        {% endfor %}
+      </table>
+   <br>   
+  <form action="/userbooks" method="get"> 
+  
+
+<a href="http://localhost:5000/task" >Back to task menu</a> 
+<br> 
+<a href="http://localhost:5000/logout" >LOGOUT</a> 
+  </form> 
+</body> 
+</html>

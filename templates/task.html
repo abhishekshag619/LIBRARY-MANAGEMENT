@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>TASKS MENU</title>
+  </head>
+<body>
+   <h1><strong>TASK MENU</strong></h1>
+   <h2>operations that can be performed by the user</h2>
+   <form action="/task" method="post">
+   {% if current_user.userrole == "user" %}
+    <ol>
+      <li><a href="http://localhost:5000/allbooks" ><em>Display all books</em></a></li>
+      <li><a href="http://localhost:5000/search" ><em>Search any book</em></a></li>
+      <li><a href="http://localhost:5000/userbooks" ><em>Display all books issued by the user</em></a></li>
+      <li><a href="http://localhost:5000/borrow" ><em>Borrow books</em></a></li>
+    </ol>
+   {% endif %}
+   <br>
+   {% if current_user.userrole == "admin" %}
+     <ol>
+      <li><a href="http://localhost:5000/allbooks" ><em>Display all books</em></a></li>
+      <li><a href="http://localhost:5000/search" ><em>Search any book</em></a></li>
+      <li><a href="http://localhost:5000/add" ><em>Add new book to library</em></a></li>
+      <li><a href="http://localhost:5000/update" ><em>Update</em></a></li>
+      <li><a href="http://localhost:5000/delete" ><em>Delete</em></a></li>
+    </ol> 
+   {% endif %}
+   <br> 
+<a href="http://localhost:5000/logout" >LOGOUT</a>
+   </form>   
+</body>
+</html>  

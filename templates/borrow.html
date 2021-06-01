@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>BORROW</title>
+  </head>
+<body>
+   <h1><strong>BORROW BOOK</strong></h1><br>
+   <h2><strong>DISPLAY ALL BOOKS </strong></h2>
+   <form action="/borrow" method="get"> 
+  <label >RESULT: {{bk}}</label>
+</form>
+  <br>
+  <h2><strong>BOOK THAT YOU WANT TO BORROW </strong></h2><br>
+  <form action="/borrow" method="post">
+  <label >ENTER BOOK ID:</label>
+  <input type="text" placeholder="bookid" name="bookid">
+  <br>
+  <input type="submit" value="BORROW" />
+  <input type="reset"  value="RESET" />
+<br> 
+<a href="http://localhost:5000/task" >Back to task menu</a>
+<br> 
+<a href="http://localhost:5000/logout" >LOGOUT</a>  
+</form>
+</body> 
+</html>  

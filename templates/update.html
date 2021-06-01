@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>UPDATE BOOK</title>
+  </head>
+<body>
+  <h1><strong>UPDATE EXISTING BOOK</strong></h1>
+  <br> 
+  <form action="/update" method="post">
+   <label >ENTER BOOK ID:</label>
+   <input type="text" placeholder="bookid" name="bookid">
+   <br> 
+   <h2>Enter new details</h2>
+   <br> 
+   <label >ENTER BOOK NAME:</label>
+   <input type="text" placeholder="nbname" name="nbname">
+   <br>
+   <label >ENTER AUTHORS NAME:</label>
+   <input type="text" placeholder="nauthor" name="nauthor">
+   <br>
+   <label >ENTER BOOKS SERIAL NO:</label>
+   <input type="text" placeholder="booksno" name="booksno">
+   <br>
+   <input type="submit" value="UPDATE" />
+   <input type="reset"  value="RESET" />
+<br> 
+<a href="http://localhost:5000/task" >Back to task menu</a>
+<br> 
+<a href="http://localhost:5000/logout" >LOGOUT</a>   
+</form>
+</body> 
+</html>

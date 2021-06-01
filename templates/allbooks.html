@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title> USERBOOK</title>
+  </head>
+<body>
+  <h1><strong>BOOKS IN THE LIBRARY </strong></h1>
+  
+  <form action="/allbooks" method="post">
+  {% if current_user.userrole == "admin" %}
+  <table>
+        <th >BOOK ID</th>
+        <th >BOOK NAME</th>
+        <th >AUTHORS NAME</th>
+        <th >BOOK SERIAL NO</th>
+        
+        <th >BORROWED USERS NAME</th>
+        <th >ISSUED ON</th>
+        <th >RETURN DATE</th>
+     <tbody>
+     {% for x in books %}
+     <tr>
+          <td >{{x._id}}</td>
+          <td >{{x.bookname}}</td>
+          <td >{{x.authorname}}</td>
+          <td >{{x.booksno}}</td>
+          
+          <td >{{x.issueduser.username}}</td>
+          <td >{{x.issuedon}}</td>
+          <td >{{x.dayofreturn}}</td>
+     </tbody>   
+     </tr>
+      {% endfor %}
+      </table>
+  {% endif %}
+   <br>
+   {% if current_user.userrole == "user" %}
+    <table>
+        <th >BOOK ID</th>
+        <th >BOOK NAME</th>
+        <th >AUTHORS NAME</th>
+        <th >BOOK SERIAL NO</th>
+    <tbody>
+     {% for x in books %}
+     <tr>
+          <td >{{x._id}}</td>
+          <td >{{x.bookname}}</td>
+          <td >{{x.authorname}}</td>
+          <td >{{x.booksno}}</td>
+     </tbody>   
+     </tr>
+      {% endfor %}
+      </table>
+   {% endif %}   
+  
+  
+
+<a href="http://localhost:5000/task" >Back to task menu</a> 
+<br> 
+<a href="http://localhost:5000/logout" >LOGOUT</a> 
+ </form> 
+</body> 
+</html> 

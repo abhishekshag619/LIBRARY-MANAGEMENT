@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>SEARCH BOOK</title>
+  </head>
+<body>
+  <h1><strong>SEARCH BOOK</strong></h1>
+   
+  <form action="/search" method="post">
+  <label >ENTER BOOK NAME:</label>
+  <input type="text" placeholder="bookname" name="bookname">
+  <br>
+  <input type="submit" value="SEARCH" />
+  <input type="reset"  value="RESET" />
+  <br>
+  <label >RESULT: {{book}}</label>
+ <br> 
+<a href="http://localhost:5000/task" >Back to task menu</a>
+<br> 
+<a href="http://localhost:5000/logout" >LOGOUT</a>  
+</form>
+</body> 
+</html>   

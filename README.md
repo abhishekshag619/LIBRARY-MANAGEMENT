@@ -1,5 +1,5 @@
 # LIBRARY-MANAGEMENT
-Library management using python,flask and mongodb
+Library management using python,flask and mongodb.
 In this project while registering new account , we have two options for account type
 1.admin 2.user
 operations that can be performed by admin account are

@@ -18,7 +18,7 @@ def addbook():
          authorname = request.form["authorname"]
          booksno = request.form["booksno"]
          bookDetails.objects.create(bookname=bookname,authorname=authorname,
-         booksno=booksno,addedby=addedby)
+         booksno=booksno)
          
         return render_template("add.html")      
     return render_template('add.html')
